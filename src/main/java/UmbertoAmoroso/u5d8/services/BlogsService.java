@@ -17,6 +17,11 @@ public class BlogsService {
     @Autowired
     private AuthorsService authorsService;
 
+    public BlogsService(BlogsRepository blogsRepository, AuthorsService authorsService) {
+        this.blogsRepository = blogsRepository;
+        this.authorsService = authorsService;
+    }
+
     public Blogpost save(NewBlogPostPayload body) {
         Author author = authorsService.findById(body.getAuthorId());
         Blogpost newBlogPost = new Blogpost();
