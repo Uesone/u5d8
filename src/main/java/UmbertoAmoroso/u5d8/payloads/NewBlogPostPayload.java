@@ -10,7 +10,7 @@ public class NewBlogPostPayload {
     private double readingTime;
     private String title;
 
-    public NewBlogPostPayload(int authorId, String category) {
+    public NewBlogPostPayload(int authorId, String category, String content, double readingTime, String title) {
         this.authorId = authorId;
         this.category = category;
         this.content = content;

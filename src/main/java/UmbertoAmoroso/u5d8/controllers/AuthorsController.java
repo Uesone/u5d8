@@ -16,7 +16,7 @@ public class AuthorsController {
     // 1. - POST http://localhost:3001/authors (+ req.body)
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED) // <-- 201
-    public Author saveAuthor(@RequestBody Author body) throws Exception {
+    public Author saveAuthor(@RequestBody Author body) {
         return authorsService.save(body);
     }
 
